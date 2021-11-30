@@ -8,6 +8,10 @@ module.exports = {
         print: './src/print.js',
       },
 
+      devServer: {
+        static: './dist',
+      },
+
       plugins: [
         new HtmlWebpackPlugin({
           title: 'Output Management',

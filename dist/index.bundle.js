@@ -17208,6 +17208,20 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 }.call(this));
 
 
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ printMe)
+/* harmony export */ });
+function printMe() {
+    console.log('I get called from print.js!');
+  }
+  
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -17308,13 +17322,21 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _print_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
+
 
 
 function component() {
     const element = document.createElement('div');
+    const btn = document.createElement('button');
   
     // Lodash, now imported by this script
     element.innerHTML = lodash__WEBPACK_IMPORTED_MODULE_0___default().join(['Hello', 'webpack'], ' ');
+    btn.innerHTML = 'Click me and check the console!';
+  btn.onclick = _print_js__WEBPACK_IMPORTED_MODULE_1__["default"];
+
+  element.appendChild(btn);
   
     return element;
   }
